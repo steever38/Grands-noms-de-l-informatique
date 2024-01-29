@@ -1,0 +1,84 @@
+/* Dispositions des boites contenant les personnes */
+#container {
+    /* Boites flexibles */
+    display: flex;
+    /* Aligne au centre les boites */
+    justify-content: center;
+    /* Permet aux boite de se déplacer sur une nouvelle ligne */
+    flex-wrap: wrap;
+}
+
+/* Style du titre */
+h1 {
+    /* Faire une marge */
+    margin-bottom: 12px;
+    margin-top: 20px;
+    /* Aligne le texte au centre */
+    text-align: center;
+    color: rgb(208, 208, 208);
+    /* Taille du texte */
+    font-size: 80px;
+    /* Texte en gras */
+    font-weight: bold;
+    /* Police du texte */
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Style des boites */
+.personnes {
+    /* Glassmorphism pour les boites contenant les personnes */
+    background: rgba(206, 206, 206, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.2px);
+    -webkit-backdrop-filter: blur(3.2px);
+    border: 1px solid rgba(182, 182, 182, 0.2);
+    /* Faire une marge */
+    margin: 10px 8px;
+    /* Centrer le texte */
+    text-align: center;
+    /* Arrondit des bords */
+    border-radius: 16px;
+    /* Transition pour un changement de style quand on passe sa souris dessus */
+    transition: border-radius 0.4s ease, background 0.6s ease, transform 0.5s ease;
+}
+
+/* Style des images */
+.personnes img {
+    /* hauteur fixe pour les images */
+    height: 250px;
+    border-radius: 16px 16px 0px 0px;
+    transition: border-radius 0.4s ease
+}
+
+/* La boite contenant la personne change de style quand on passe sa souris dessus */
+.personnes:hover {
+    border-radius: 32px;
+    background: rgba(206, 206, 206, 0.25);
+    /* Zoom de la boite */
+    transform: scale(1.04);
+}
+
+/* L'image change de style quand on passe sa souris sur la boite */
+.personnes:hover img {
+    border-radius: 32px 32px 0px 0px;
+}
+
+/* Le texte dans la boite contenant la personne change de style quand on passe sa souris dessus */
+.personnes:hover p {
+    /* Texte en gras */
+    font-weight: bold;
+}
+
+/* Style pour les liens hypertextes */
+a{
+    /* Pas de décoration de texte */
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+/* Fond du site */
+body {
+    /* Chargement de l'image svg du fond */
+    background-image: url( 'images/background.svg' );
+}
+
